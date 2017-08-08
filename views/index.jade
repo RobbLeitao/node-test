@@ -1,0 +1,11 @@
+extends ./layout.jade
+block Contenido
+	div(class="Container" style="width: 45%; margin: 0 auto; padding-top: 25px; border: 1px solid #A4A4A4; margin-top: 50px;")
+		img(src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Node.js_logo.svg/1200px-Node.js_logo.svg.png" style="width: auto; height: 100px; margin: 0 auto; display: flex;")
+		h1(style="margin: 0 auto; text-align: center;") Bienvenido a NodeJS
+		- if(error != undefined)
+			div(id="div-error" class="border mt-15")
+				p(class="close") x
+				p(class="text-center bold-red mt-10")=error
+		a(href="/login" style="display: flex; margin-top: 15px; justify-content: center;" class="btn btn-default") Iniciar Sesion
+		a(href="/signup" style="display: flex; justify-content: center;" class="btn btn-default") Registro

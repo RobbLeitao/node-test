@@ -1,0 +1,24 @@
+doctype html
+html(lang="es")
+    head
+        title NodeJS
+        meta(charset="utf-8")
+        link(href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet")
+        link(href="/public/assets/css/app.css" rel="stylesheet")
+        link(rel='shortcut icon', href='https://camo.githubusercontent.com/ae6c148f364589c80069fcf7e853f082e6c6d363/687474703a2f2f6e6f64656a732d636c6f75642e636f6d2f696d672f31323870782f6e6f64656a732e706e67', type='image/x-icon') 
+    body
+        nav(class="nav nav-tabs")
+            ul(id="ul-nav" class="nav nav-tabs")
+                - if (user)
+                    li(class="user-name-nav" role="presentation") 
+                        a(class="green") #{user.username}
+                    li(role="presentation" class="active")
+                        a(href="/app" class="green") Mi Perfil
+                    li(role="presentation")
+                        a(href="/app/imagenes" class="green") Todos los Registros
+                    li(role="presentation")
+                        a(href="/logout" class="green") Logout
+        block Contenido
+
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+        <script src="/public/assets/js/app-query.js"></script>

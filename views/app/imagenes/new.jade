@@ -1,0 +1,15 @@
+extends ../../layout.jade
+block Contenido
+	form(action="/app/imagenes", method="POST")
+		div(class="Container" style="width: 45%; margin: 0 auto; padding-top: 25px; border: 1px solid #A4A4A4; margin-top: 50px;")
+			h1(style="margin: 0 auto; text-align: center;") Nuevo Registro
+			hr
+			div(class="form-group" style="padding-left: 15px; padding-right: 15px; margin-top: 15px;")
+				input(type="text", name="title", placeholder="Ingrese un registro..." id="title" class="form-control" required)
+				input(name="user" type="hidden" value="#{user.username}")
+			div(class="form-group hide" style="padding-left: 15px; padding-right: 15px;")
+				input(type="file", name="archivo", id="password", class="form-control border-none file-selector" placeholder="Seleccione una imagen")
+			div(class="footer" style="margin-top: 75px; height: 75px; background-color: ghostwhite; padding-top: 15px; padding-left: 15px; padding-right: 15px; border-top: 1px solid #A4A4A4;")
+				input(type="submit", name="btn-submit", value="Guadar Registro" class="btn btn-success")
+				a(href="/app" class="btn btn-default" style="margin-left: 15px;") Volver
+				img(src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Node.js_logo.svg/1200px-Node.js_logo.svg.png" style="width: auto; height: 50px; margin: 0 auto; display: flex; float: right;")

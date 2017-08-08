@@ -1,0 +1,22 @@
+extends ./layout.jade
+block Contenido
+	form(action="/users", method="POST")
+		div(class="Container" style="width: 45%; margin: 0 auto; padding-top: 25px; border: 1px solid #A4A4A4; margin-top: 50px;")
+			h1(style="margin: 0 auto; text-align: center;") Registro
+			div(class="form-group" style="padding-left: 15px; padding-right: 15px;")
+				lable(for="email") Email
+				input(type="text", name="email", placeholder="Email" id="email" class="form-control" required)
+			div(class="form-group" style="padding-left: 15px; padding-right: 15px;")
+				lable(for="password") Password
+				input(type="password", name="password", placeholder="Pass" id="password" class="form-control" required)
+			div(class="form-group" style="padding-left: 15px; padding-right: 15px;")
+				lable(for="password_confirmation") Confirma tu password
+				input(type="password", name="password_confirmation", placeholder="Confirma tu pass" id="password_confirmation" class="form-control" required)
+			div(class="form-group" style="padding-left: 15px; padding-right: 15px;")
+				lable(for="username") Username
+				input(type="text", name="username", placeholder="Nombre de Usuario" id="username" class="form-control" required)
+				a(href="/login" class="btn right mt-15" style="margin-left: 15px; color: green;") Ya tengo cuenta
+			div(class="footer" style="margin-top: 45px; height: 75px; background-color: ghostwhite; padding-top: 15px; padding-left: 15px; padding-right: 15px;     border-top: 1px solid #A4A4A4;")
+				input(type="submit", name="btn-submit", value="Registrarse" class="btn btn-success")
+				a(href="/" class="btn btn-default" style="margin-left: 15px;") Cancelar
+				img(src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Node.js_logo.svg/1200px-Node.js_logo.svg.png" style="width: auto; height: 50px; margin: 0 auto; display: flex; float: right;")
