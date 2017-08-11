@@ -15,7 +15,7 @@ html(lang="es")
             ul(id="ul-nav" class="nav nav-tabs")
                 - if (user)
                     li(class="user-name-nav" role="presentation") 
-                        a(class="green") #{user.username}
+                        a(id="name-label-user-nav" class="green") #{user.username}
                     li(role="presentation" class="active")
                         a(href="/app" class="green") Mi Perfil
                     li(role="presentation")
