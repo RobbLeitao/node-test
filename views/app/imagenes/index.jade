@@ -25,8 +25,13 @@ block Contenido
 								br
 							- else
 									p(style="text-decoration: line-through; margin-bottom: 0px;") Editar
+
+							- if (imagen.user == user.username)
+									button(onclick="eliminarElemento('#{imagen._id}')", value="Eliminar" class="green") Eliminar
+								- else
+									p(style="text-decoration: line-through; margin-bottom: 0px;") Eliminar
 							
-							form(action="/app/imagenes/#{imagen._id}?_method=DELETE" class="link" method="POST")
+							form(action="/app/imagenes/#{imagen._id}?_method=DELETE" class="link hide" method="POST")
 								- if (imagen.user == user.username)
 									button(type="submit", value="Eliminar" class="green") Eliminar
 								- else

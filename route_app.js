@@ -22,7 +22,6 @@ router.route("/registro/:id")
 	.get(function(req,res){
 		Imagen.findById(req.params.id, function(err, imagen){
 		res.render("app/imagenes/registro",{imagen:imagen});
-		console.log(imagen);
 		});
 	})
 
@@ -48,7 +47,6 @@ router.route("/imagenes/:id")
 		Imagen.findOneAndRemove({_id: req.params.id}, function(err){
 			if(!err){
 				res.redirect(req.get('referer'));
-				//res.redirect("/app/imagenes");
 			} else {
 				console.log(err);
 				res.render("app/imagenes/" + req.params.id);

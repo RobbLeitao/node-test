@@ -14,7 +14,8 @@ block Contenido
 							.col-md-2.mt-25.text-center
 								a(href="/app/imagenes/#{imagen._id}/edit" class="green" style="text-decoration: none;") Editar
 								br
-								form(action="/app/imagenes/#{imagen._id}?_method=DELETE" class="link" method="POST")
+								button(onclick="eliminarElemento('#{imagen._id}')", value="Eliminar" class="green") Eliminar
+								form(action="/app/imagenes/#{imagen._id}?_method=DELETE" class="link hide" method="POST")
 									button(type="submit", value="Eliminar" class="green") Eliminar
 
 		div(class="footer" style="height: 75px; background-color: ghostwhite; padding-top: 15px; padding-left: 15px; padding-right: 15px; border-top: 1px solid #A4A4A4;")

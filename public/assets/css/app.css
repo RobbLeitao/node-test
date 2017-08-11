@@ -64,6 +64,11 @@ form.link button[type="submit"]{
 	border: none;
 }
 
+button{
+	background-color: transparent;
+	border: none;
+}
+
 .text-center{
 	text-align: center;
 }
@@ -84,4 +89,12 @@ form.link button[type="submit"]{
     padding-right: 15px;
     color: red;
     cursor: pointer;
+}
+
+.bootstrap-dialog.type-success .modal-header{
+	background-color: green !important;
+}
+
+.btn-success{
+	background-color: green !important;
 }
