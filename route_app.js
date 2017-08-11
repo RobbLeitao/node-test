@@ -14,6 +14,7 @@ router.get("/imagenes/new", function(req,res){
 
 router.get("/imagenes/:id/edit", function(req,res){
 	Imagen.findById(req.params.id, function(err, imagen){
+		console.log(req);
 		res.render("app/imagenes/edit",{imagen:imagen});
 	});
 });

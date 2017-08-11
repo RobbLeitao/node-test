@@ -7,7 +7,7 @@ $("#forgetPass").on('click', function(){
 });
 
 function eliminarElemento(id){
-	var user_name = $("#name-label-user-nav").text();
+	var user_name = $("#name_label_user_nav").text();
     BootstrapDialog.show({
     title: user_name + ' ¿Estás seguro?',
     message: '¿Querés eliminar este registro?',
