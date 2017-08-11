@@ -16,6 +16,8 @@ block Contenido
 						a(href="app/imagenes/new" class="btn btn-default" style="margin-left: 15px;") Nuevo Registro
 						a(href="/app/misRegistros" class="btn btn-default" style="margin-left: 15px;") Mis Registros
 						a(href="/app/imagenes/#{imagen._id}/edit" class="btn btn-default" style="margin-left: 15px;") Editar
+						form(action="/app/imagenes/#{imagen._id}?_method=DELETE" method="POST" class="form-reg")
+							button(type="submit" class="btn btn-default" style="margin-left: 15px;") Eliminar
 					- else
 						a(href="/app/imagenes" class="btn btn-default" style="margin-left: 15px;") Volver
 					img(src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Node.js_logo.svg/1200px-Node.js_logo.svg.png" style="width: auto; height: 50px; margin: 0 auto; display: flex; float: right;")

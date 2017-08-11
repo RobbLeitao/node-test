@@ -3,6 +3,10 @@ block Contenido
 	div(class="Container" style="width: 45%; margin: 0 auto; padding-top: 25px; box-shadow: 0px 0px 70px #888888; margin-top: 50px;")
 				h1(style="margin: 0 auto; text-align: center;") Hola #{user.username}
 				p(style="text-align: center;") ¿Como estuvo tu dia?
+				- if(success != undefined)
+					div(id="div-error" class="border mt-15")
+						p(class="close") x
+						p(class="text-center bold-red mt-10")=success
 				div(class="footer" style="margin-top: 35px; height: 75px; background-color: ghostwhite; padding-top: 15px; padding-left: 15px; padding-right: 15px;     border-top: 1px solid #A4A4A4;")
 					a(href="app/imagenes/new" class="btn btn-default" style="margin-left: 15px;") Nuevo Registro
 					a(href="/app/misRegistros" class="btn btn-default" style="margin-left: 15px;") Mis Registros

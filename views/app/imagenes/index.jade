@@ -4,6 +4,8 @@ block Contenido
 		h1(style="margin: 0 auto; text-align: center; padding-bottom: 25px; border-bottom: 1px solid #eee;") Listado general de registros
 
 		div(class="scroll-registros")
+			if imagenes.length == 0
+				h1(class="sin-registros") NO HAY REGISTROS ACTUALMENTE.
 			for imagen in imagenes
 				.border
 					.row

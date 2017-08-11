@@ -47,7 +47,8 @@ router.route("/imagenes/:id")
 	.delete(function(req,res){
 		Imagen.findOneAndRemove({_id: req.params.id}, function(err){
 			if(!err){
-				res.redirect(req.get('referer'));
+				//res.redirect(req.get('referer'));
+				res.render('app/home', {success: "El elemento se eliminó correctamente."});
 			} else {
 				console.log(err);
 				res.render("app/imagenes/" + req.params.id);
